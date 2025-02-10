@@ -6,7 +6,7 @@ A simple Task Manager Android application built using **MVVM Architecture**, **R
 - Display all tasks in a **RecyclerView**.
 - Tasks are **sorted by due date**.
 - **Mark tasks as completed** with a checkbox.
-
+ 
 **Add/Edit Task Screen**
 - Add a new task with:
     - **Title**
