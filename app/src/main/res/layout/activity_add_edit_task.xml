@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- Task Title Input -->
+        <EditText
+            android:id="@+id/editTextTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Task Title"
+            android:background="@drawable/border"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Task Description Input -->
+        <EditText
+            android:id="@+id/editTextDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:hint="Task Description"
+            android:inputType="textMultiLine"
+            android:minHeight="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextTitle" />
+
+        <!-- Due Date Picker -->
+        <TextView
+            android:id="@+id/btnPickDueDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_cancel_bg"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:drawableStart="@drawable/ic_calender"
+            android:text="Pick Due Date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextDescription" />
+
+        <TextView
+            android:id="@+id/tvSelectedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text=""
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnPickDueDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnPickDueDate"
+            app:layout_constraintTop_toBottomOf="@id/editTextDescription" />
+
+        <!-- Priority Selection -->
+        <Spinner
+            android:id="@+id/spinnerPriority"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border"
+            android:entries="@array/priority_array"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/btnSaveTask"
+            app:layout_constraintStart_toStartOf="@+id/btnSaveTask"
+            app:layout_constraintTop_toBottomOf="@+id/btnPickDueDate" />
+
+        <!-- Save Task Button -->
+        <TextView
+            android:id="@+id/btnSaveTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_cancel_bg"
+           android:layout_marginTop="20dp"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:drawableStart="@drawable/ic_save"
+            android:text="Save Task"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinnerPriority" />
+
+        <!-- Cancel Button -->
+        <TextView
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_cancel_bg"
+            android:drawableStart="@drawable/ic_cancel"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:text="Cancel"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/btnSaveTask"
+            app:layout_constraintStart_toStartOf="@+id/btnSaveTask"
+            app:layout_constraintTop_toBottomOf="@+id/btnSaveTask" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
